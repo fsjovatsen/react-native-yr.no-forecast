@@ -25,6 +25,7 @@
     "lodash.foreach": "~4.5.0",
     "moment": "~2.22.0",
     "pixl-xml": "~1.0.10",
+    "react-native-xml2js": "^1.0.3",
     "verror": "~1.9.0",
     "yr.no-interface": "~1.2.0"
   },

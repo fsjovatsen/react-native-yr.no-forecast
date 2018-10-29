@@ -2,7 +2,9 @@
 
 const log = require('debug')(require('./package.json').name);
 const moment = require('moment');
-const XML = require('pixl-xml');
+//const XML = require('pixl-xml');
+const xml2js = require('react-native-xml2js');
+
 const VError = require('verror');
 const each = require('lodash.foreach');
 const Promise = require('bluebird');
@@ -99,12 +101,24 @@ function LocationForecast(xml) {
   var startDt = Date.now();
 
   // Parse to JSON and return this object on success
+
+    var parser = new xml2js.Parser();
+    parser.parseString(xml, function(error, result) {
+      if (error) {
+          throw new VError(error, 'failed to parse returned xml string to JSON');
+      } else {
+        this.json = result;
+          log('parsing xml to json took %dms', Date.now() - startDt);
+      }
+    });
+    /*
   try {
     this.json = XML.parse(xml, {preserveDocumentNode: true});
     log('parsing xml to json took %dms', Date.now() - startDt);
   } catch (e) {
     throw new VError(e, 'failed to parse returned xml string to JSON');
   }
+  */
 
   this._init();
 
