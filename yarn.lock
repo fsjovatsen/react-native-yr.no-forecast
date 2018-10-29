@@ -1992,11 +1992,6 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
-pixl-xml@~1.0.10:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/pixl-xml/-/pixl-xml-1.0.13.tgz#5ba71408bdf37994c239dd01251c10c53c0587e3"
-  integrity sha1-W6cUCL3zeZTCOd0BJRwQxTwFh+M=
-
 pkg-dir@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"

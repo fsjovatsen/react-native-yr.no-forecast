@@ -102,7 +102,7 @@ function LocationForecast(xml) {
 
     // Parse to JSON and return this object on success
 
-    var parser = new xml2js.Parser();
+    var parser = new xml2js.Parser({explicitRoot: true});
     parser.parseString(xml, function (error, result) {
         if (error) {
             throw new VError(error, 'failed to parse returned xml string to JSON');
